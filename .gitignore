@@ -1,0 +1,15 @@
+*.env
+*.files
+*.langchain.db
+*.chroma
+.vscode
+.DS_STORE
+fly.toml
+.dockerignore
+__pycache__
+storage
+venv
+credentials.json
+token.json
+*.chainlit
+*.sql
