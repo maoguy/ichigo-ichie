@@ -70,12 +70,14 @@ const Playground = () => {
       >
         <div className="grid w-full gap-2">
           <Textarea
+            onSubmit={handleSendMessage}
             placeholder="Type your message here."
             autoFocus
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
           <Button
+            type="submit"
             onClick={handleSendMessage}
           >
             Send message

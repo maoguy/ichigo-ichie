@@ -22,7 +22,17 @@ Start the server in headless mode:
 
 ```shell
 cd ./backend
+pip install -r requirement.txt
+pip install uvicorn
 uvicorn app:app --host 0.0.0.0 --port 8080
+```
+
+To create a virtual environment yourself you can use Python's venv:
+```shell
+python -m venv .venv
+source ./venv/bin/activate
+./venv/bin/pip install -r requirement.txt
+./venv/bin/unicorn app:app --host 0.0.0.0 --port 8080
 ```
 
 ## Start the Web Client
