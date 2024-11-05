@@ -1,4 +1,5 @@
 # ichigo-ichie
+A open-source conversational AI project that supports multiple clients
 
 ## backend
   [chainlit](https://github.com/Chainlit/chainlit)
