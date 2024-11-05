@@ -1,1 +1,1 @@
-export const CHAINLIT_SERVER_HOST = "http://172.21.33.60:8080";//"http://localhost:8080";
+export const CHAINLIT_SERVER_HOST = "http://localhost:8080";
