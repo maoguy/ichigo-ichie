@@ -5,15 +5,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ChainlitChat from './screens/ChainlitChat';
 import {
   ChainlitAPI,
-  APIBase,
   ChainlitContext
-} from "@chainlit/react-client";
+} from './libs/cl-sdk-1.2';
+
 import { CHAINLIT_SERVER_HOST } from './chainlit.config.ts';
 import { RecoilRoot } from "recoil";
 
 const CHAINLIT_SERVER = `${CHAINLIT_SERVER_HOST}/chainlit`;
 
-const apiClient = new ChainlitAPI(CHAINLIT_SERVER);
+const apiClient = new ChainlitAPI(CHAINLIT_SERVER,"webapp");
 
 function HomeScreen() {
   return (
@@ -22,7 +22,8 @@ function HomeScreen() {
         flex: 1,
         justifyContent: "center", //垂直居中
         alignItems: "center", //水平剧中
-      }}>
+      }}
+    >
       <ChainlitContext.Provider value={apiClient}>
         <RecoilRoot>
           <ChainlitChat/>

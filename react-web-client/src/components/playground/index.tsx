@@ -43,6 +43,14 @@ const Playground = () => {
     scrollContainer.scrollTop = scrollContainer.scrollHeight;
   }
 
+  const handleOfKeyDown:React.KeyboardEventHandler<HTMLTextAreaElement> = (e) => {
+    //回车发送,shift+回车换行（不进行任何操作）
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // 发送消息的逻辑
+      handleSendMessage();
+    }
+  }
+
   useEffect(()=>{
     /* 当messages变化时,将滚动条拉到最下 */
     handleScrollBottom();
@@ -75,6 +83,7 @@ const Playground = () => {
             autoFocus
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={handleOfKeyDown}
           />
           <Button
             type="submit"

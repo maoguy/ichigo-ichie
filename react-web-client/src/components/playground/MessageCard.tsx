@@ -27,7 +27,7 @@ const MessageCard = (props:TProps) => {
           S
         </AvatarFallback>
       </Avatar>
-      <Card className="mb-5">
+      <Card className="mb-5 max-w-lg">
         <CardHeader>
           <CardTitle>{message.name}</CardTitle>
           <CardDescription>

@@ -1,10 +1,12 @@
+import {View,Text, Button} from 'react-native';
 import { useEffect } from 'react'
 import { Playground } from '../components/playground';
 import { useRecoilValue } from "recoil";
-import { sessionState, useChatSession } from "@chainlit/react-client";
+import { sessionState, useChatSession } from "../libs/cl-sdk-1.2";
 import { CHAINLIT_SERVER_HOST } from '../chainlit.config';
 
 const userEnv = {};
+
 
 const ChainlitChat = () => {
   const { connect } = useChatSession();
