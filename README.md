@@ -13,8 +13,12 @@ A open-source conversational AI project that supports multiple clients
 ### react-native-client
 
 #### Android
-![5e233c216f7f421f08e0d80b63ce8e3](https://github.com/user-attachments/assets/99a984f4-d7ab-4fac-8493-d8e0df5766b7)
+![Android-image](https://github.com/user-attachments/assets/99a984f4-d7ab-4fac-8493-d8e0df5766b7)
 
 
 #### IOS
-![9bd66de356518c639e39816db70062f](https://github.com/user-attachments/assets/c9d0cf7c-1dc2-44e0-99ca-a19bafb9c778)
+![IOS-image](https://github.com/user-attachments/assets/c9d0cf7c-1dc2-44e0-99ca-a19bafb9c778)
+
+
+#### Web
+![Web-image](https://github.com/user-attachments/assets/5d322076-a433-49be-91c1-60250763082f)
