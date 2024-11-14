@@ -48,9 +48,9 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="Home"
+          name="Chat"
           component={HomeScreen}
-          options={{ tabBarIcon: makeIconRender("home") }}
+          options={{ tabBarIcon: makeIconRender("chat") }}
         />
         <Tab.Screen
           name="Settings"

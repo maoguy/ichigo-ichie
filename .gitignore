@@ -1,4 +1,5 @@
 *.env
+*.venv
 *.files
 *.langchain.db
 *.chroma

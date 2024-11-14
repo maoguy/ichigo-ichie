@@ -12,6 +12,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar";
+import ollama from './imgs/ollama.png';
+import Markdown from 'react-markdown' ;
 
 interface TProps {
   message: IStep;
@@ -22,7 +24,10 @@ const MessageCard = (props:TProps) => {
   return (
     <div className={`flex ${message.type==="user_message"?"flex-row-reverse":"flex-row"} gap-5`}>
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage
+          src={message.type==="user_message"?"https://github.com/shadcn.png":ollama}
+          alt="@shadcn"
+        />
         <AvatarFallback>
           S
         </AvatarFallback>
@@ -36,13 +41,15 @@ const MessageCard = (props:TProps) => {
             }
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <p>
+        <CardContent
+          style={{overflow:"auto"}}
+        >
+          <Markdown>
             {message.output}
-          </p>
+          </Markdown>
         </CardContent>
         <CardFooter>
-          <small>
+          <small style={{color:"#999999"}}>
             {new Date(message.createdAt).toLocaleString()}
           </small>
         </CardFooter>
